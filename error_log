@@ -1,0 +1,2 @@
+[01-Dec-2020 11:30:11 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/chriskottisseikt/public_html/wordpress/wp-includes/general-template.php on line 2238
+[01-Dec-2020 11:30:11 UTC] PHP Warning:  strlen() expects parameter 1 to be string, array given in /home/chriskottisseikt/public_html/wordpress/wp-includes/general-template.php on line 2239
