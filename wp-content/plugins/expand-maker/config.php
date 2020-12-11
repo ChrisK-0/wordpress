@@ -138,9 +138,9 @@ if(!class_exists('YrmConfig')) {
 				define("YRM_LANG", 'yrm_lang');
 			}
 
-			$this->addDefine('EXPM_VERSION', 2.63);
-			$this->addDefine('YRM_VERSION_TEXT', '2.6.3');
-			$this->addDefine('EXPM_VERSION_PRO', 1.69);
+			$this->addDefine('EXPM_VERSION', 2.64);
+			$this->addDefine('YRM_VERSION_TEXT', '2.6.4');
+			$this->addDefine('EXPM_VERSION_PRO', 1.70);
 			$this->addDefine('YRM_ADMIN_POST_NONCE', 'YRM_ADMIN_POST_NONCE');
 
 			$this->addDefine('YRM_FREE_PKG', 1);
@@ -176,7 +176,7 @@ if(!class_exists('YrmConfig')) {
 			$this->addDefine('YRM_fY', 'yrmSupportKey');
 			$this->addDefine('YRM_FIND_TABLE', 'find_and_replace');
 			$this->addDefine('YRM_FAR_PLUGIN_KEY', 'read-more-advanced-far/read-more-advanced-far.php');
-			$this->addDefine('YRM_SUBS_KEY', 'read-more-subscription/read-more-subscription.php');
+			$this->addDefine('YRM_SUBS_KEY', 'read-more-subscription/ReadMoreSubscription.php');
 
 			$this->addDefine('YRM_SUPPORT_MENU_KEY', 'yrmSupportKey');
 			$this->addDefine('YRM_VIDEO_TUTORIAL_KEY', 'yrmTutorialKey');

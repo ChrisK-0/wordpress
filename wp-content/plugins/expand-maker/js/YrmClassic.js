@@ -15,8 +15,9 @@ YrmClassic.prototype.init = function () {
 	}
 
 	var data = readMoreArgs[id];
-
-	jQuery('.yrm-content').addClass('yrm-hide').removeClass('yrm-content-hide');
+	if (!data['default-show-hidden-content']) {
+		jQuery('.yrm-content').addClass('yrm-hide').removeClass('yrm-content-hide');
+	}
 	this.setData('readMoreData', data);
 	this.setData('id', id);
 	this.setStyles();

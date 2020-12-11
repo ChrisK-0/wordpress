@@ -82,7 +82,7 @@ class ReadMoreIncludeManager {
             $hideClassName = '';
             $showStatus = 'true';
         }
-		
+
 		$dataAfterAction = $dataObj->getOptionValue('load-data-after-action');
 		$content = $this->filterToggleContent();
 		return "<$tag class='yrm-content yrm-content-".esc_attr($id)." ".esc_attr($hideClassName)."' id='".esc_attr($rel)."' data-id='".esc_attr($id)."' data-show-status='".esc_attr($showStatus)."' data-after-action='".esc_attr($dataAfterAction)."'>

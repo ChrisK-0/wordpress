@@ -1,11 +1,15 @@
+<?php
+    $proExtensionP = '<p class="yrm-ext-title yrm-ext-title-pro">'. __('PRO EXTENSION', YRM_LANG).'</p>';
+    $comingSoonClass = '';
+    if (!empty($extension['comingSoon'])) {
+	    $proExtensionP = '<p class="yrm-ext-title yrm-ext-title-coming">'.__('Coming Soon', YRM_LANG).'</p>';
+	    $comingSoonClass = 'yrm-coming-soon-wrapper';
+    }
+?>
 <div class="product-banner" onclick="window.open('<?php echo YRM_PRO_URL.'#yrm-'.esc_attr($extension['shortKey']); ?>')">
-	<div class="yrm-<?php echo esc_attr($extension['shortKey']);?>">
+	<div class="yrm-<?php echo esc_attr($extension['shortKey']);?> <?php echo $comingSoonClass; ?>">
 		<div class="yrm-types type-banner-pro">
-			<?php if (!empty($extension['comingSoon'])): ?>
-				<p class="yrm-ext-title yrm-ext-title-coming"><?php _e('Coming Soon', YRM_LANG);?></p>
-			<?php else : ?>
-				<p class="yrm-ext-title yrm-ext-title-pro"><?php _e('PRO EXTENSION', YRM_LANG);?></p>
-			<?php endif; ?>
+			<?php echo $proExtensionP; ?>
 		</div>
 	</div>
 	<div class="yrm-type-view-footer">

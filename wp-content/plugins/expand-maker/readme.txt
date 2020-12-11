@@ -2,8 +2,8 @@
 Contributors: Edmon Parker
 Tags: read more ,expander, expand, expandable,read less ,Accordion,show more,Do more,WP show more, Expanding, collapsible, display, expandable content,  show more, hidden, hide, javascript, jquery, more, read me,  shortcode
 Requires at least: 3.8
-Tested up to: 5.5.3
-Stable tag: 2.6.3
+Tested up to: 5.6
+Stable tag: 2.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,10 @@ Shortcode example:
 We do web development and if you need a developer or if you think you have found a bug in Read more plugin, if you have any question, please feel free to contact us by this email <b>edmon.parker@gmail.com</b>.
 
 == Changelog ==
+= 2.6.4 =
+* Bug fixed of the option ' By default show hidden content '
+* Compatibility with the WordPress 5.6
+
 = 2.6.3 =
 * Multiple read more delete possibility
 * Read more subscription type coming soon
