@@ -3,7 +3,7 @@ Tags:              change wp-login, rename wp-login, wp-admin, login, wp-login, 
 Contributors:      nunosarmento
 Requires at least: 4.4
 Tested up to:      5.6
-Stable tag:        1.0.2
+Stable tag:        1.0.4
 License:           GPL-2.0+
 
 
@@ -17,7 +17,18 @@ Example: http://www.example.com/my-login.
 
 == New Feature ==
 
-Automatic redirect to homepage when someone tries to access the wp-login.php page or the wp-admin directory while not logged in.
+Add redirect custom field:
+
+When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirect to the page that you defined on the redirect custom field.
+
+If you leave the redirect field empty the plugin will add a redirect to the homepage.
+
+== How to use the plugin ==
+
+Step 1: Add new login URL
+
+Step 2: Add redirect URL
+
 
 == Installation ==
 
@@ -63,3 +74,11 @@ Yes, it does work. You should setup the login URL in each website (Settings-->Pe
 
 = 1.0.2 =
 * Add translations
+
+= 1.0.3 =
+* Add redirect custom field.
+* When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirect to the page that you defined on the redirect custom field.
+
+= 1.0.4 =
+* Add redirect custom field.
+* Better instructions in how to use the redirect field

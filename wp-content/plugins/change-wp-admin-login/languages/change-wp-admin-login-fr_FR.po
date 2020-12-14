@@ -44,7 +44,11 @@ msgstr "Réglage par défaut du réseau"
 msgid "Login url"
 msgstr "URL de connexion"
 
-#: ../includes/class-change-wp-admin-login.php:214
+#: ../includes/class-change-wp-admin-login.php:183
+msgid "Redirect URL"
+msgstr ""
+
+#: ../includes/class-change-wp-admin-login.php:226
 #, php-format
 msgid ""
 "To set a networkwide default, go to <a href=\"%s\">Network Settings</a>."
@@ -52,12 +56,11 @@ msgstr ""
 "Pour définir un réglage par défaut pour le réseau, allez aux <a href=\\”%s"
 "\\”>réglages du réseaux</a>."
 
-#: ../includes/class-change-wp-admin-login.php:226
-msgid "Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website homepage."
-msgstr "lorsque quelqu'un essaie d'accéder à la page wp-login.php ou au répertoire wp-admin sans être connecté, il sera redirigé vers la page d'accueil du site Web."
+#: ../includes/class-change-wp-admin-login.php.php:235
+msgid "Use the slug name, example: "contact-me" - DO NOT USE the full website URL. If you leave the above field empty the plugin will add a redirect to the website homepage."
+msgstr ""
 
-
-#: ../includes/class-change-wp-admin-login.php:233
+#: ../includes/class-change-wp-admin-login.php:250
 #, php-format
 msgid ""
 "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
@@ -66,11 +69,11 @@ msgstr ""
 "Votre page de connexion est maintenant ici : <strong><a href=\\”%1$s\\”>"
 "%2$s</a></strong>. Mettez-la en favori !"
 
-#: ../includes/class-change-wp-admin-login.php:239
-#: ../includes/class-change-wp-admin-login.php:241
+#: ../includes/class-change-wp-admin-login.php:256
+#: ../includes/class-change-wp-admin-login.php:258
 msgid "Settings"
 msgstr "Réglages"
 
-#: ../includes/class-change-wp-admin-login.php:258
+#: ../includes/class-change-wp-admin-login.php:275
 msgid "This feature is not enabled."
 msgstr "Cette fonctionnalité n’est pas activée."

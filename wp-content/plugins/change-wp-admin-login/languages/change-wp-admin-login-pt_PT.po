@@ -44,7 +44,11 @@ msgstr "Padrão em toda a rede"
 msgid "Login url"
 msgstr "URL de login"
 
-#: ../includes/class-change-wp-admin-login.php:214
+#: ../includes/class-change-wp-admin-login.php:183
+msgid "Redirect URL"
+msgstr ""
+
+#: ../includes/class-change-wp-admin-login.php:226
 #, php-format
 msgid ""
 "To set a networkwide default, go to <a href=\"%s\">Network Settings</a>."
@@ -52,12 +56,11 @@ msgstr ""
 "Para definir um padrão para toda a rede, carregue em <a href=\\”%s\\”> "
 "Configurações de rede </a>."
 
-#: ../includes/class-change-wp-admin-login.php:226
-msgid "Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website homepage."
-msgstr "Quando alguém tentar aceder a página wp-login.php ou o diretório wp-admin enquanto não estiver logado, será redirecionado para a página inicial do site."
+#: ../includes/class-change-wp-admin-login.php.php:235
+msgid "Use the slug name, example: "contact-me" - DO NOT USE the full website URL. If you leave the above field empty the plugin will add a redirect to the website homepage."
+msgstr ""
 
-
-#: ../includes/class-change-wp-admin-login.php:233
+#: ../includes/class-change-wp-admin-login.php:250
 #, php-format
 msgid ""
 "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
@@ -66,11 +69,11 @@ msgstr ""
 "Sua página de login agora está aqui: <strong><a href=\\”%1$s\\”>%2$s</a></"
 "strong>. Guarde a pagina nos seus favoritos!"
 
-#: ../includes/class-change-wp-admin-login.php:239
-#: ../includes/class-change-wp-admin-login.php:241
+#: ../includes/class-change-wp-admin-login.php:256
+#: ../includes/class-change-wp-admin-login.php:258
 msgid "Settings"
 msgstr "Definições"
 
-#: ../includes/class-change-wp-admin-login.php:258
+#: ../includes/class-change-wp-admin-login.php:275
 msgid "This feature is not enabled."
 msgstr "Este recurso não está activado."

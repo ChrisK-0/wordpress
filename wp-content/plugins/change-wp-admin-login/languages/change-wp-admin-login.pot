@@ -37,34 +37,38 @@ msgid "Networkwide default"
 msgstr ""
 
 #: ../includes/class-change-wp-admin-login.php:175
-msgid "Login url"
+msgid "Login URL"
 msgstr ""
 
-#: ../includes/class-change-wp-admin-login.php:214
+#: ../includes/class-change-wp-admin-login.php:183
+msgid "Redirect URL"
+msgstr ""
+
+#: ../includes/class-change-wp-admin-login.php:226
 #, php-format
 msgid ""
 "To set a networkwide default, go to <a href=\"%s\">Network Settings</a>."
 msgstr ""
 
-#: ../includes/class-change-wp-admin-login.php.php:226
-msgid "Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website homepage."
+#: ../includes/class-change-wp-admin-login.php.php:235
+msgid "Use the slug name, example: "contact-me" - DO NOT USE the full website URL. If you leave the above field empty the plugin will add a redirect to the website homepage."
 msgstr ""
 
-#: ../includes/class-change-wp-admin-login.php:233
+#: ../includes/class-change-wp-admin-login.php:250
 #, php-format
 msgid ""
 "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
 "Bookmark this page!"
 msgstr "
 
-#: ../includes/class-change-wp-admin-login.php:239
-msgid "Settings"
-msgstr ""
-
-#: ../includes/class-change-wp-admin-login.php:241
+#: ../includes/class-change-wp-admin-login.php:256
 msgid "Settings"
 msgstr ""
 
 #: ../includes/class-change-wp-admin-login.php:258
+msgid "Settings"
+msgstr ""
+
+#: ../includes/class-change-wp-admin-login.php:275
 msgid "This feature is not enabled."
 msgstr ""

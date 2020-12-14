@@ -1,6 +1,5 @@
 <?php defined('ABSPATH') or die();
 
-
 if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 
 	class Change_WP_Admin_Login {
@@ -135,6 +134,7 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 			}
 		}
 
+
 		public function wpmu_options() {
 			$out = '';
 
@@ -172,11 +172,23 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 
 			add_settings_field(
 				'rwl-page',
-				'<label for="rwl-page">' . __( 'Login url', 'change-wp-admin-login' ) . '</label>',
+				'<label for="rwl-page">' . __( 'Login URL', 'change-wp-admin-login' ) . '</label>',
 				array( $this, 'rwl_page_input' ),
 				'permalink',
 				'change-wp-admin-login-section'
 			);
+
+			// Add redirect field
+			add_settings_field(
+				'rwl_redirect_field', __( 'Redirect URL', 'change-wp-admin-login' ),
+				array( $this, 'rwl_redirect_func' ),
+				'permalink',
+				'change-wp-admin-login-section'
+			);
+
+			if( isset( $_POST['rwl_redirect_field'] ) && $pagenow === 'options-permalink.php' ) {
+				update_option( 'rwl_redirect_field', sanitize_title_with_dashes( $_POST['rwl_redirect_field'] ) );
+			}
 
 			if ( isset( $_POST['rwl_page'] ) && $pagenow === 'options-permalink.php' ) {
 				if (
@@ -216,6 +228,12 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 
 			echo $out;
 		}
+		// new redirect field
+		public function rwl_redirect_func() {
+			$value = get_option( 'rwl_redirect_field' );
+			echo '<input type="text" value="' . esc_attr( $value ) . '" name="rwl_redirect_field" id="rwl_redirect_field" class="regular-text" />';
+			echo '<p class="description"><strong>' . __( 'Use the slug name, example: "contact-me" - DO NOT USE the full website URL. If you leave the above field empty the plugin will add a redirect to the website homepage.', 'change-wp-admin-login' ) . '</strong></p>';
+		}
 
 		public function rwl_page_input() {
 			if ( get_option( 'permalink_structure' ) ) {
@@ -223,7 +241,6 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 			} else {
 				echo '<code>' . trailingslashit( home_url() ) . '?</code> <input id="rwl-page-input" type="text" name="rwl_page" value="' . $this->new_login_slug()  . '">';
 			}
-			echo '<p class="description"><strong>' . __( 'Note: When someone tries to access the wp-login.php page or the wp-admin directory while not logged in will be redirected to the website homepage.', 'change-wp-admin-login' ) . '</strong></p>';
 		}
 
 		public function admin_notices() {
@@ -283,8 +300,13 @@ if ( defined( 'ABSPATH' ) && ! class_exists( 'Change_WP_Admin_Login' ) ) {
 			global $pagenow;
 
 			if ( is_admin() && ! is_user_logged_in() && ! defined( 'DOING_AJAX' ) ) {
-				$url = '/';
-				wp_redirect($url);
+
+				if ( get_option( 'rwl_redirect_field' ) == 'false' ) {
+				  wp_safe_redirect( '/' );
+				} else {
+					wp_safe_redirect( '/' . get_option( 'rwl_redirect_field' ) );
+				}
+
 				die();
 				//wp_die( __( 'You must log in to access the admin area.', 'change-wp-admin-login' ) );
 			}
