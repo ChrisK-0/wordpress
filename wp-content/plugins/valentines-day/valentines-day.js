@@ -238,7 +238,7 @@ var snowStorm = (function(window, document) {
   this.SnowFlake = function(parent,type,x,y) {
     var s = this, storm = parent;
 	
-	var symbls = new Array('&hearts;','&#9835;', '&bull;');
+	var symbls = new Array('♥','&#9835;', '&bull;');
     var schar = symbls[Math.floor(Math.random() * symbls.length)];
 	
 	var sclrs = new Array('#ff0000','#2CAA47','#E8EF1F','#0080FF','#ffffff');
