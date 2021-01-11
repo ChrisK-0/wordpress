@@ -18,16 +18,16 @@ var snowStorm = (function(window, document) {
 
   this.flakesMax = 70;           // Limit total amount of snow made (falling + sticking)
   this.flakesMaxActive = 64;      // Limit amount of snow falling at once (less = lower CPU use)
-  this.animationInterval = 100;    // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
+  this.animationInterval = 30;    // Theoretical "miliseconds per frame" measurement. 20 = fast + smooth, but high CPU use. 50 = more conservative, but slower
   this.excludeMobile = true;      // Snow is likely to be bad news for mobile phones' CPUs (and batteries.) By default, be nice.
   this.flakeBottom = null;        // Integer for Y axis snow limit, 0 or null for "full-screen" snow effect
   this.followMouse = true;       // Snow movement can respond to the user's mouse
-  this.snowColor = '#f00';        // Don't eat (or use?) yellow snow.
+  this.snowColor = '#38eaff';        // Don't eat (or use?) yellow snow.
   this.snowCharacter = '&hearts;';  // &bull; = bullet, &middot; is square on some systems etc.
   this.snowStick = true;          // Whether or not snow should "stick" at the bottom. When off, will never collect.
   this.targetElement = null;      // element which snow will be appended to (null = document.body) - can be an element ID eg. 'myDiv', or a DOM node reference
   this.useMeltEffect = true;      // When recycling fallen snow (or rarely, when falling), have it "melt" and fade out if browser supports it
-  this.useTwinkleEffect = true;  // Allow snow to randomly "flicker" in and out of view while falling
+  this.useTwinkleEffect = false;  // Allow snow to randomly "flicker" in and out of view while falling
   this.usePositionFixed = true;  // true = snow does not shift vertically when scrolling. May increase CPU load, disabled by default - if enabled, used only where supported
 
   // --- less-used bits ---
@@ -35,8 +35,8 @@ var snowStorm = (function(window, document) {
   this.freezeOnBlur = true;       // Only snow when the window is in focus (foreground.) Saves CPU.
   this.flakeLeftOffset = 0;       // Left margin/gutter space on edge of container (eg. browser window.) Bump up these values if seeing horizontal scrollbars.
   this.flakeRightOffset = 0;      // Right margin/gutter space on edge of container
-  this.flakeWidth = 15;            // Max pixel width reserved for snow element
-  this.flakeHeight = 15;           // Max pixel height reserved for snow element
+  this.flakeWidth = 30;            // Max pixel width reserved for snow element
+  this.flakeHeight = 30;           // Max pixel height reserved for snow element
   this.vMaxX = 3;                 // Maximum X velocity range for snow
   this.vMaxY = 2;                 // Maximum Y velocity range for snow
   this.zIndex = 0;                // CSS stacking order applied to each snowflake
@@ -238,7 +238,7 @@ var snowStorm = (function(window, document) {
   this.SnowFlake = function(parent,type,x,y) {
     var s = this, storm = parent;
 	
-	var symbls = new Array('♥','&#9835;', '&bull;');
+	var symbls = new Array('☼','#', '*', '❅', '❆', '❉', 'õ');
     var schar = symbls[Math.floor(Math.random() * symbls.length)];
 	
 	var sclrs = new Array('#ff0000','#2CAA47','#E8EF1F','#0080FF','#ffffff');
